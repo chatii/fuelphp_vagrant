@@ -21,6 +21,11 @@ execute "composer-install" do
   not_if { ::File.exists?("/usr/local/bin/composer")}
 end
 
+execute "oil-install" do
+  command "curl get.fuelphp.com/oil | sh"
+  not_if { ::File.exists?("/usr/bin/oil")}
+end
+
 template "/etc/nginx/conf.d/php-fpm.conf" do
   mode 0644
   source "php-fpm.conf.erb"
