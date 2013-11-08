@@ -19,3 +19,16 @@ git clone git@github.com:chatii/fuelphp_setup.git project_name
 # (project_name を変更) 
 sed -i -e 's/fuelphp_setup/project_name/g' Vagrantfile 
 ```
+
+## MySQL について
+
+リモートからの直接接続は許可していません。
+chatii は、ホストマシンから [Sequel Pro](http://www.sequelpro.com/) のSSH接続を行っています。
+以下は Sequel Pro の接続設定です
+
+* MySQL ホスト: 127.0.0.1
+* ユーザ名: root
+* パスワード: (空)
+* SSH ホスト: 192.168.33.10
+* SSH ユーザ: vagrant
+* SSH パスワード: vagrant
