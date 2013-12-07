@@ -4,14 +4,14 @@
 Vagrant.configure("2") do |config|
 
   # Please change src_dir to project directory name.
-  src_dir = "project_name"
+  src_dir = "fuelphp_setup"
 
   # FuelPHP Staging
   fuel_env = "development"
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "precise64"
-  config.vm.box_url = "http://dl.dropbox.com/u/1537815/precise64.box"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network :private_network, ip: "192.168.33.10"
 
   doc_root = '/vagrant_data/public'
